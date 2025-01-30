@@ -46,8 +46,12 @@ resource function 'Microsoft.Web/sites@2024-04-01' = {
           value: strCnxString
         }
         {
-          name: 'DatalakeStorage__serviceUri'
-          value: 'https://${datalakeName}.blob.core.windows.net/'
+          name: 'DatalakeStorage__blobServiceUri'
+          value: 'https://${datalakeName}.blob.core.windows.net'
+        }
+        {
+          name: 'DatalakeStorage__queueServiceUri'
+          value: 'https://${datalakeName}.queue.core.windows.net'
         }
       ]
       cors: {
